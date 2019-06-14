@@ -268,6 +268,17 @@ if has_sphinx_gallery:
         'default_thumb_file': path.joinpath('logo', 'sunpy_icon_128x128.png'),
         'abort_on_example_error': False,
         'plot_gallery': True
+        'binder': {
+            # Required keys
+            'org': 'sunpy',
+            'repo': 'sunpy',
+            'branch': 'master',  # noqa: E501 Can be any branch, tag, or commit hash. Use a branch that hosts your docs.
+            'binderhub_url': 'https://mybinder.org',  # noqa: E501 Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
+            'dependencies': [
+                '../.rtd-environment.yml'
+            ],
+            'use_jupyter_lab': True,
+        },
     }
 
 
